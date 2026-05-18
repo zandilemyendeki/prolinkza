@@ -1,0 +1,4 @@
+.slot {
+  border-radius: var(--radius-md);
+  transition: background 0.2s;
+}
