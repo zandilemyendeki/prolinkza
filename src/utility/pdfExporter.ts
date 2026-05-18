@@ -2448,7 +2448,7 @@ function generateTwoColumnPDF(
             data.personal.email,
             sidebarWidth - 2 * sidebarMargin
         );
-        emailLines.forEach((line: string) => {
+        emailLines.forEach((line: any) => {
             doc.text(line, sidebarMargin, sidebarY);
             sidebarY += 5;
         });
