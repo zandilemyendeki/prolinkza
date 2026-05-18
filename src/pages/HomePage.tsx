@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { AlertCircle, ChevronRight, FileText, ShieldCheck, Zap, Mail, ExternalLink, GraduationCap, BookOpen, ArrowRight, HandCoins, FileUser, LayoutTemplate } from 'lucide-react';
-import AdSlot from '../components/AdSlot';
+// import AdSlot from '../components/AdSlot';
 import SectionHeader from '../components/SectionHeader';
 import { nsfasUpdates, cvTools, resumeTemplates } from '../data';
 import styles from './HomePage.module.css';
@@ -71,9 +71,9 @@ export default function HomePage() {
 
   return (
     <div className={styles.page}>
-      <div className={styles.adLeaderboard}>
+      {/* <div className={styles.adLeaderboard}>
         <AdSlot size="leaderboard" />
-      </div>
+      </div> */}
 
       <div className={styles.layout}>
         <main className={styles.main}>
@@ -233,9 +233,9 @@ export default function HomePage() {
             </Link>
           </section>
 
-          <div className={styles.adMid}>
+          {/* <div className={styles.adMid}>
             <AdSlot size="rectangle" />
-          </div>
+          </div> */}
 
           <section className={styles.section}>
             <SectionHeader title="Find jobs, bursaries & internships" viewAllTo="/opportunities" viewAllLabel="View all portals →" />
@@ -270,7 +270,7 @@ export default function HomePage() {
 
         {/* Sidebar */}
         <aside className={styles.sidebar}>
-          <AdSlot size="skyscraper" />
+          {/* <AdSlot size="skyscraper" /> */}
 
           <div className={styles.quickLinksWidget}>
             <div className={styles.widgetTitle}>Quick links</div>
@@ -296,7 +296,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <AdSlot size="square" />
+          {/* <AdSlot size="square" /> */}
         </aside>
       </div>
     </div>

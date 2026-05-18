@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Zap, Copy, Check, Info, Search, FileText, TrendingUp } from 'lucide-react';
-import AdSlot from '../../../components/AdSlot';
+// import AdSlot from '../../../components/AdSlot';
 import styles from './KeywordOptimizerPage.module.css';
 
 // ─── Stop words to filter out ─────────────────────────────────────────────────
@@ -178,7 +178,7 @@ export default function KeywordOptimizerPage() {
           </div>
 
       <div className={styles.inner}>
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
 
         {/* How it works */}
         <div className={styles.howItWorks}>
@@ -344,7 +344,7 @@ export default function KeywordOptimizerPage() {
           </div>
         )}
 
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
       </div>
     </div>
   );

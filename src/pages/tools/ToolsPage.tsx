@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FileText, ShieldCheck, Zap, Mail, ArrowRight, Sparkles, Clock, Download } from 'lucide-react';
-import AdSlot from '../../components/AdSlot';
+// import AdSlot from '../../components/AdSlot';
 import styles from './ToolsPage.module.css';
 import nalaPreview from '../../assets/templates/nala-preview.png';
 import masterPreview from '../../assets/templates/master-preview.png';
@@ -108,7 +108,7 @@ export default function ToolsPage() {
 
       <div className={styles.inner}>
 
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
 
         {/* Tools grid */}
         <section className={styles.section}>
@@ -152,7 +152,7 @@ export default function ToolsPage() {
           </div>
         </section>
 
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
 
         {/* Templates */}
         <section className={styles.section}>
@@ -201,7 +201,7 @@ export default function ToolsPage() {
           </div>
         </section>
 
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
 
         {/* CTA banner */}
         <div className={styles.ctaBanner}>

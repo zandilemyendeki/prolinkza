@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ShieldCheck, AlertTriangle, XCircle, CheckCircle, Upload, RotateCcw, Info } from 'lucide-react';
-import AdSlot from '../../../components/AdSlot';
+// import AdSlot from '../../../components/AdSlot';
 import styles from './AtsCheckerPage.module.css';
 
 interface CheckResult {
@@ -212,7 +212,7 @@ export default function AtsCheckerPage() {
       </div>
 
       <div className={styles.inner}>
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
 
         <div className={styles.howItWorks}>
           {[
@@ -376,7 +376,7 @@ export default function AtsCheckerPage() {
           </div>
         </section>
 
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
       </div>
     </div>
   );

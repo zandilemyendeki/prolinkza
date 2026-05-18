@@ -1,5 +1,5 @@
 import { ExternalLink, AlertCircle, CheckCircle, Calendar, FileText, Users, BookOpen, Banknote, Info, ChevronRight } from 'lucide-react';
-import AdSlot from '../../components/AdSlot';
+// import AdSlot from '../../components/AdSlot';
 import styles from './NsfasPage.module.css';
 
 const eligibility = [
@@ -113,7 +113,7 @@ export default function NsfasPage() {
       <div className={styles.layout}>
         <main className={styles.main}>
 
-          <AdSlot size="leaderboard" />
+          {/* <AdSlot size="leaderboard" /> */}
 
           {/* Urgent alert */}
           <div className={styles.urgentAlert}>
@@ -173,7 +173,7 @@ export default function NsfasPage() {
             </div>
           </section>
 
-          <AdSlot size="leaderboard" />
+          {/* <AdSlot size="leaderboard" /> */}
 
           {/* Allowances */}
           <section className={styles.card}>
@@ -273,7 +273,7 @@ export default function NsfasPage() {
             </div>
           </section>
 
-          <AdSlot size="leaderboard" />
+          {/* <AdSlot size="leaderboard" /> */}
 
           {/* FAQs */}
           <section className={styles.card}>
@@ -339,7 +339,7 @@ export default function NsfasPage() {
             ))}
           </div>
 
-          <AdSlot size="rectangle" />
+          {/* <AdSlot size="rectangle" /> */}
 
           <div className={styles.sideCard}>
             <div className={styles.sideCardTitle}>2027 deadlines</div>
@@ -355,7 +355,7 @@ export default function NsfasPage() {
             ))}
           </div>
 
-          <AdSlot size="square" />
+          {/* <AdSlot size="square" /> */}
         </aside>
       </div>
     </div>

@@ -1,7 +1,7 @@
 // src/pages/tools/cover-letter/CoverLetterPage.tsx
 import { useState } from 'react';
 import { Mail, Sparkles, Copy, Download, RotateCcw, CheckCircle, AlertCircle } from 'lucide-react';
-import AdSlot from '../../../components/AdSlot';
+// import AdSlot from '../../../components/AdSlot';
 import styles from './CoverLetterPage.module.css';
 
 interface FormData {
@@ -93,7 +93,7 @@ export default function CoverLetterPage() {
       </div>
 
       <div className={styles.inner}>
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
 
         {/* Features */}
         <div className={styles.features}>
@@ -300,7 +300,7 @@ export default function CoverLetterPage() {
           </div>
         </section>
 
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
       </div>
     </div>
   );

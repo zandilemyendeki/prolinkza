@@ -1,5 +1,5 @@
 import { ExternalLink, Shield, AlertTriangle, CheckCircle, FileText, Mail, Search } from 'lucide-react';
-import AdSlot from '../../components/AdSlot';
+// import AdSlot from '../../components/AdSlot';
 import styles from './OpportunitiesPage.module.css';
 
 const portalCategories = [
@@ -102,7 +102,7 @@ export default function OpportunitiesPage() {
 
       <div className={styles.inner}>
 
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
 
         {/* Portal categories */}
         {portalCategories.map((cat) => {
@@ -148,7 +148,7 @@ export default function OpportunitiesPage() {
           );
         })}
 
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
 
         {/* Safety tips */}
         <section className={styles.safetySection}>
@@ -181,7 +181,7 @@ export default function OpportunitiesPage() {
           </p>
         </div>
 
-        <AdSlot size="leaderboard" />
+        {/* <AdSlot size="leaderboard" /> */}
       </div>
     </div>
   );

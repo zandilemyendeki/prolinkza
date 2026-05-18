@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { ExternalLink, Search, MapPin, Calendar, CalendarClock, Banknote, ChevronDown, ChevronUp, Calculator, GraduationCap, Building2, Timer } from 'lucide-react';
-import AdSlot from '../../components/AdSlot';
+// import AdSlot from '../../components/AdSlot';
 import { universities, colleges, provinces } from '../../data/universities';
 import { useCountdown } from '../../hooks/useCountdown';
 import styles from './UniversitiesPage.module.css';
@@ -389,7 +389,7 @@ export default function UniversitiesPage() {
             </div>
 
             <div className={styles.inner}>
-                <AdSlot size="leaderboard" />
+                {/* <AdSlot size="leaderboard" /> */}
                 <ApsCalculator />
 
                 <div className={styles.tabs}>
@@ -462,7 +462,7 @@ export default function UniversitiesPage() {
                     </div>
                 </div>
 
-                <AdSlot size="leaderboard" />
+                {/* <AdSlot size="leaderboard" /> */}
             </div>
         </div>
     );
