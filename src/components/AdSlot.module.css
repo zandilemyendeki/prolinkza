@@ -2,3 +2,12 @@
   border-radius: var(--radius-md);
   transition: background 0.2s;
 }
+
+.adLabel {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 4px;
+}

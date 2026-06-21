@@ -107,7 +107,6 @@
   transform: translateY(-2px);
 }
 
-/* Card colour variants — left border accent */
 .cardTeal   { border-left: 3px solid var(--color-brand); }
 .cardPurple { border-left: 3px solid #534AB7; }
 .cardBlue   { border-left: 3px solid #185FA5; }

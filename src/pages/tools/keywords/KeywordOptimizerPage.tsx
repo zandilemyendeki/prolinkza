@@ -1,9 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Zap, Copy, Check, Info, Search, FileText, TrendingUp } from 'lucide-react';
-// import AdSlot from '../../../components/AdSlot';
 import styles from './KeywordOptimizerPage.module.css';
 
-// ─── Stop words to filter out ─────────────────────────────────────────────────
 const stopWords = new Set([
   'the','a','an','and','or','but','in','on','at','to','for','of','with','by',
   'from','as','is','are','was','were','be','been','have','has','had','do','does',
@@ -19,7 +17,6 @@ const stopWords = new Set([
   'ensure','make','take','help','need','provide','required','working','looking',
 ]);
 
-// ─── Extract keywords from text ───────────────────────────────────────────────
 function extractKeywords(text: string): Map<string, number> {
   const words = text
     .toLowerCase()
@@ -30,7 +27,6 @@ function extractKeywords(text: string): Map<string, number> {
   const freq = new Map<string, number>();
   words.forEach(w => freq.set(w, (freq.get(w) ?? 0) + 1));
 
-  // Also extract 2-word phrases
   const tokens = text.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(Boolean);
   for (let i = 0; i < tokens.length - 1; i++) {
     if (!stopWords.has(tokens[i]) && !stopWords.has(tokens[i + 1]) && tokens[i].length > 2 && tokens[i + 1].length > 2) {
@@ -44,7 +40,6 @@ function extractKeywords(text: string): Map<string, number> {
   return freq;
 }
 
-// ─── Types ────────────────────────────────────────────────────────────────────
 interface KeywordResult {
   word: string;
   jobFreq: number;
@@ -53,7 +48,6 @@ interface KeywordResult {
   importance: 'high' | 'medium' | 'low';
 }
 
-// ─── Main analysis function ───────────────────────────────────────────────────
 function analyzeKeywords(jobDesc: string, cvText: string): KeywordResult[] {
   const jobKws = extractKeywords(jobDesc);
   const cvKws = extractKeywords(cvText);
@@ -77,16 +71,13 @@ function analyzeKeywords(jobDesc: string, cvText: string): KeywordResult[] {
 
   return results
     .sort((a, b) => {
-      // Sort: missing high → missing medium → weak → found
       const statusOrder = { missing: 0, weak: 1, found: 2 };
       const importanceOrder = { high: 0, medium: 1, low: 2 };
       if (statusOrder[a.status] !== statusOrder[b.status]) return statusOrder[a.status] - statusOrder[b.status];
       return importanceOrder[a.importance] - importanceOrder[b.importance];
     })
-    .slice(0, 40); // top 40
+    .slice(0, 40);
 }
-
-// ─── Match score bar ──────────────────────────────────────────────────────────
 function MatchBar({ score }: { score: number }) {
   const color = score >= 75 ? '#1D9E75' : score >= 50 ? '#BA7517' : '#993C1D';
   const label = score >= 75 ? 'Strong match' : score >= 50 ? 'Moderate match' : 'Weak match';
@@ -113,7 +104,6 @@ function MatchBar({ score }: { score: number }) {
   );
 }
 
-// ─── Main page ────────────────────────────────────────────────────────────────
 export default function KeywordOptimizerPage() {
   const [jobDesc, setJobDesc] = useState('');
   const [cvText, setCvText] = useState('');
@@ -160,8 +150,6 @@ export default function KeywordOptimizerPage() {
 
   return (
     <div className={styles.page}>
-
-      {/* Hero */}
           <div className={styles.hero}>
               <div className={styles.heroInner}>
                   <div>
@@ -178,9 +166,6 @@ export default function KeywordOptimizerPage() {
           </div>
 
       <div className={styles.inner}>
-        {/* <AdSlot size="leaderboard" /> */}
-
-        {/* How it works */}
         <div className={styles.howItWorks}>
           {[
             { icon: FileText, label: 'Paste job description' },
@@ -196,7 +181,6 @@ export default function KeywordOptimizerPage() {
           ))}
         </div>
 
-        {/* Input panels */}
         <div className={styles.inputs}>
           <div className={styles.inputCard}>
             <div className={styles.inputHeader}>
@@ -229,7 +213,6 @@ export default function KeywordOptimizerPage() {
           </div>
         </div>
 
-        {/* Action buttons */}
         <div className={styles.actions}>
           <button className={styles.resetBtn} onClick={handleReset} disabled={!jobDesc && !cvText}>
             Clear all
@@ -239,10 +222,8 @@ export default function KeywordOptimizerPage() {
           </button>
         </div>
 
-        {/* Results */}
         {hasAnalysed && results.length > 0 && (
           <>
-            {/* Match score */}
             <div className={styles.scoreCard}>
               <div className={styles.scoreCardTitle}>
                 <TrendingUp size={16} /> Keyword match score
@@ -268,7 +249,6 @@ export default function KeywordOptimizerPage() {
               </div>
             </div>
 
-            {/* Copy missing */}
             {missing.length > 0 && (
               <div className={styles.copyMissing}>
                 <div className={styles.copyMissingLeft}>
@@ -281,7 +261,6 @@ export default function KeywordOptimizerPage() {
               </div>
             )}
 
-            {/* Filter tabs */}
             <div className={styles.filterTabs}>
               {([
                 { key: 'all',     label: `All (${results.length})` },
@@ -299,7 +278,6 @@ export default function KeywordOptimizerPage() {
               ))}
             </div>
 
-            {/* Keyword pills */}
             <div className={styles.keywordsPanel}>
               <div className={styles.legendRow}>
                 <span className={`${styles.legendItem} ${styles.legendFound}`}>■ Found in CV</span>
@@ -325,7 +303,6 @@ export default function KeywordOptimizerPage() {
               </div>
             </div>
 
-            {/* Tips */}
             <div className={styles.tipsBox}>
               <div className={styles.tipsBoxTitle}><Info size={14} /> How to add keywords effectively</div>
               <div className={styles.tipsList}>
@@ -344,7 +321,6 @@ export default function KeywordOptimizerPage() {
           </div>
         )}
 
-        {/* <AdSlot size="leaderboard" /> */}
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'NSFAS', to: '/nsfas' },
   { label: 'University Applications', to: '/universities'},
+  { label: 'Career Insights', to: '/career' },
   { label: 'Bursaries', to: '/opportunities?type=bursary' },
   { label: 'Internships', to: '/opportunities?type=internship' },
   { label: 'Graduate Programmes', to: '/opportunities?type=graduate' },

@@ -1,5 +1,6 @@
 import { ExternalLink, AlertCircle, CheckCircle, Calendar, FileText, Users, BookOpen, Banknote, Info, ChevronRight } from 'lucide-react';
 // import AdSlot from '../../components/AdSlot';
+import { Link } from 'react-router-dom';
 import styles from './NsfasPage.module.css';
 
 const eligibility = [
@@ -124,6 +125,31 @@ export default function NsfasPage() {
               Apply now <ExternalLink size={11} />
             </a>
           </div>
+
+          {/* Articles section */}
+          <section className={styles.card}>
+            <div className={styles.cardHead}>
+              <div className={`${styles.cardIcon} ${styles.teal}`}><BookOpen size={17} /></div>
+              <div>
+                <h2 className={styles.cardTitle}>In-depth NSFAS guides</h2>
+                <p className={styles.cardSub}>Detailed articles to help you through every step</p>
+              </div>
+            </div>
+            <div className={styles.articlesGrid}>
+              {[
+                { to: '/nsfas/articles', title: 'Complete NSFAS Application Guide 2027', desc: 'Step-by-step walkthrough of the entire application process.', time: '8 min read' },
+                { to: '/nsfas/articles', title: 'How to Appeal a Rejected Application', desc: 'What to do if your application was rejected and how to submit a successful appeal.', time: '5 min read' },
+                { to: '/nsfas/articles', title: 'NSFAS Allowances Explained', desc: 'Full breakdown of what NSFAS pays for and how allowances are disbursed.', time: '6 min read' },
+                { to: '/nsfas/articles', title: 'NSFAS vs Bursaries vs Student Loans', desc: 'Understand the difference and which funding option is right for you.', time: '7 min read' },
+              ].map((a) => (
+                <Link key={a.to} to={a.to} className={styles.articleLink}>
+                  <div className={styles.articleLinkTitle}>{a.title}</div>
+                  <div className={styles.articleLinkDesc}>{a.desc}</div>
+                  <span className={styles.articleLinkMeta}>{a.time} →</span>
+                </Link>
+              ))}
+            </div>
+          </section>
 
           {/* Application Process */}
           <section className={styles.card}>

@@ -4,7 +4,13 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import NsfasPage from './pages/nsfas/NsfasPage';
+import ArticlesIndex from './pages/nsfas/articles/ArticlesIndex';
+import NsfasGuide from './pages/nsfas/articles/NsfasGuide';
+import NsfasAppeals from './pages/nsfas/articles/NsfasAppeals';
+import NsfasAllowances from './pages/nsfas/articles/NsfasAllowances';
+import FundingComparison from './pages/nsfas/articles/FundingComparison';
 import Universities from './pages/universities/UniversitiesPage';
+import CareerSkills from './pages/career/Careerskills';
 import OpportunitiesPage from './pages/opportunities/OpportunitiesPage';
 import ToolsPage from './pages/tools/ToolsPage';
 import ResumeBuilderPage from './pages/tools/builder/ResumeBuilderPage';
@@ -14,7 +20,7 @@ import CoverLetterPage from './pages/tools/cover-letter/CoverLetterPage';
 import AboutPage from './pages/about/AboutPage';
 import AdvertisePage from './pages/advertise/AdveritisePage';
 import PrivacyPage from './pages/privacy-policy/PrivacyPage';
-import TermsPage from './pages/terms/TermsPage'; 
+import TermsPage from './pages/terms/TermsPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -31,7 +37,13 @@ function AppRoutes() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/nsfas" element={<NsfasPage />} />
+          <Route path="/nsfas/articles" element={<ArticlesIndex />} />
+          <Route path="/nsfas/articles/guide" element={<NsfasGuide />} />
+          <Route path="/nsfas/articles/appeals" element={<NsfasAppeals />} />
+          <Route path="/nsfas/articles/allowances" element={<NsfasAllowances />} />
+          <Route path="/nsfas/articles/funding-comparison" element={<FundingComparison />} />
           <Route path="/universities" element={<Universities />} />
+          <Route path="/career" element={<CareerSkills />} />
           <Route path="/opportunities" element={<OpportunitiesPage />} />
           <Route path="/tools/builder" element={<ResumeBuilderPage />} />
           <Route path="/tools/ats" element={<AtsCheckerPage />} />

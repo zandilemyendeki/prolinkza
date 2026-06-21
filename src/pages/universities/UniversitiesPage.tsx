@@ -1,6 +1,5 @@
 import { useState, useMemo } from 'react';
 import { ExternalLink, Search, MapPin, Calendar, CalendarClock, Banknote, ChevronDown, ChevronUp, Calculator, GraduationCap, Building2, Timer } from 'lucide-react';
-// import AdSlot from '../../components/AdSlot';
 import { universities, colleges, provinces } from '../../data/universities';
 import { useCountdown } from '../../hooks/useCountdown';
 import styles from './UniversitiesPage.module.css';
@@ -166,14 +165,14 @@ function ApsCalculator() {
                                             const qualifies = aps >= u.minAps;
                                             return (
                                                 <div key={u.id} className={`${styles.apsUniRow} ${qualifies ? styles.apsQualified : styles.apsNotQualified}`}>
-                                                    <span className={styles.apsUniName}>{u.shortName} — {u.name}</span>
+                                                    <span className={styles.apsUniName}>{u.shortName} - {u.name}</span>
                                                     <span className={styles.apsUniMin}>Min APS: {u.minAps}</span>
                                                     <span className={styles.apsStatus}>{qualifies ? '✓' : '✗'}</span>
                                                 </div>
                                             );
                                         })}
                                         <div className={`${styles.apsUniRow} ${styles.apsNote2}`}>
-                                            <span className={styles.apsUniName}>UNISA — University of South Africa</span>
+                                            <span className={styles.apsUniName}>UNISA - University of South Africa</span>
                                             <span className={styles.apsUniMin}>Open entry (no min APS)</span>
                                             <span className={styles.apsStatus} style={{ color: 'var(--color-brand)' }}>✓</span>
                                         </div>
@@ -188,7 +187,6 @@ function ApsCalculator() {
     );
 }
 
-// ─── Countdown display component ──────────────────────────────────────────────
 function CountdownTimer({ isoDate }: { isoDate: string }) {
     const { days, hours, minutes, seconds, expired, urgent } = useCountdown(isoDate);
 
@@ -229,7 +227,6 @@ function CountdownTimer({ isoDate }: { isoDate: string }) {
     );
 }
 
-// ─── University Card ──────────────────────────────────────────────────────────
 function UniversityCard({ uni }: { uni: typeof universities[0] }) {
     const [expanded, setExpanded] = useState(false);
     return (
@@ -259,7 +256,6 @@ function UniversityCard({ uni }: { uni: typeof universities[0] }) {
                 </div>
             </div>
 
-            {/* Countdown */}
             <CountdownTimer isoDate={uni.applicationCloseISO} />
 
             <div className={styles.uniInfo}>
@@ -309,7 +305,6 @@ function UniversityCard({ uni }: { uni: typeof universities[0] }) {
     );
 }
 
-// ─── College Card ─────────────────────────────────────────────────────────────
 function CollegeCard({ college }: { college: typeof colleges[0] }) {
     return (
         <div className={styles.collegeCard}>
@@ -340,7 +335,6 @@ function CollegeCard({ college }: { college: typeof colleges[0] }) {
     );
 }
 
-// ─── Main Page ────────────────────────────────────────────────────────────────
 type TabType = 'universities' | 'colleges';
 
 export default function UniversitiesPage() {
@@ -389,7 +383,6 @@ export default function UniversitiesPage() {
             </div>
 
             <div className={styles.inner}>
-                {/* <AdSlot size="leaderboard" /> */}
                 <ApsCalculator />
 
                 <div className={styles.tabs}>
@@ -461,8 +454,6 @@ export default function UniversitiesPage() {
                         </div>
                     </div>
                 </div>
-
-                {/* <AdSlot size="leaderboard" /> */}
             </div>
         </div>
     );

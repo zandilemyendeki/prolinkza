@@ -1,7 +1,5 @@
-// src/pages/tools/cover-letter/CoverLetterPage.tsx
 import { useState } from 'react';
 import { Mail, Sparkles, Copy, Download, RotateCcw, CheckCircle, AlertCircle } from 'lucide-react';
-// import AdSlot from '../../../components/AdSlot';
 import styles from './CoverLetterPage.module.css';
 
 interface FormData {
@@ -93,7 +91,6 @@ export default function CoverLetterPage() {
       </div>
 
       <div className={styles.inner}>
-        {/* <AdSlot size="leaderboard" /> */}
 
         {/* Features */}
         <div className={styles.features}>
@@ -299,14 +296,11 @@ export default function CoverLetterPage() {
             ))}
           </div>
         </section>
-
-        {/* <AdSlot size="leaderboard" /> */}
       </div>
     </div>
   );
 }
 
-// ─── Cover Letter Template Generator ─────────────────────────────────────────
 function generateCoverLetter(data: FormData): string {
   const today = new Date().toLocaleDateString('en-ZA', {
     year: 'numeric',
