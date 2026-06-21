@@ -10,7 +10,7 @@ import NsfasAppeals from './pages/nsfas/articles/NsfasAppeals';
 import NsfasAllowances from './pages/nsfas/articles/NsfasAllowances';
 import FundingComparison from './pages/nsfas/articles/FundingComparison';
 import Universities from './pages/universities/UniversitiesPage';
-import CareerSkills from './pages/career/Careerskills';
+import CareerSkills from './pages/career/CareerSkills';
 import OpportunitiesPage from './pages/opportunities/OpportunitiesPage';
 import ToolsPage from './pages/tools/ToolsPage';
 import ResumeBuilderPage from './pages/tools/builder/ResumeBuilderPage';
