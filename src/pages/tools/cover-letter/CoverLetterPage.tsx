@@ -80,7 +80,7 @@ export default function CoverLetterPage() {
           <div>
             <div className={styles.heroTag}>
               <Sparkles size={11} />
-              <span>AI-powered tool</span>
+              <span>Auto-generator tool</span>
             </div>
             <h1 className={styles.heroTitle}>Cover letter generator</h1>
             <p className={styles.heroSub}>

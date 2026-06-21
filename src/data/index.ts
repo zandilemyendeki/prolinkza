@@ -78,7 +78,7 @@ export const cvTools: CvTool[] = [
     name: 'Cover letter generator',
     description: 'AI-generated cover letters tailored to each job and company',
     icon: 'Mail',
-    badge: 'AI-powered',
+    badge: 'Auto-generated',
     badgeColor: 'blue',
     route: '/tools/cover-letter',
   },

@@ -111,6 +111,7 @@ export default function HomePage() {
             <div className={styles.heroQuickLinks}>
               <Link to="/nsfas" className={styles.heroQL}>NSFAS 2027 <span>→</span></Link>
               <Link to="/universities" className={styles.heroQL}>Universities <span>→</span></Link>
+              <Link to="/career" className={styles.heroQL}>Career Insights <span>→</span></Link>
               <Link to="/opportunities" className={styles.heroQL}>Bursaries <span>→</span></Link>
               <Link to="/tools/builder" className={styles.heroQL}>Build my CV <span>→</span></Link>
             </div>
@@ -118,6 +119,7 @@ export default function HomePage() {
               {[
                 { num: '26', label: 'universities listed' },
                 { num: '50+', label: 'TVET colleges' },
+                { num: '20+', label: 'Private Institutions' },
                 { num: '10+', label: 'job portals' },
                 { num: '9', label: 'provinces covered' },
                 { num: 'Free', label: 'CV builder & tools' },

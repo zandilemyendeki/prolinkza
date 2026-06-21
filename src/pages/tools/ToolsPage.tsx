@@ -60,7 +60,7 @@ const tools = [
     tagline: 'AI-written, personally yours',
     desc: 'Enter the job title, company name and a few notes about yourself. Get a tailored, professional cover letter in seconds that you can edit before sending.',
     route: '/tools/cover-letter',
-    badge: 'AI-powered',
+    badge: 'Auto-generated',
     badgeStyle: styles.badgeBlue,
     iconStyle: styles.iconBlue,
     featured: false,
